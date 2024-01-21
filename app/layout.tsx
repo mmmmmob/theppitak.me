@@ -28,7 +28,7 @@ export default function RootLayout({
           <div className="dark:bg-gray flex h-screen bg-white">
             <Navbar />
             <div className=" flex flex-1 flex-col overflow-hidden ">
-              <main className="flex-1 overflow-y-auto overflow-x-hidden pl-80">
+              <main className="flex-1 overflow-y-auto overflow-x-hidden pl-72">
                 {children}
               </main>
               <Footer />
