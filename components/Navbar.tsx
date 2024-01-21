@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="h-screen">
-        <div className="absolute left-0 top-0 h-screen w-80 bg-black" />
+        <div className="absolute left-0 top-0 h-screen w-72 bg-black" />
       </div>
     </div>
   );
