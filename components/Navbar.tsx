@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="absolute left-0 top-0 flex h-screen w-72 flex-col bg-black">
-      <div className="flex h-32 flex-grow-0 border-b-2">
+      <Link className="flex h-32 flex-grow-0 border-b-2" href="/">
         <div className="mb-3 self-center pl-7">
           <Image src="/logo.png" alt="logo" width={90} height={90} />
         </div>
@@ -14,13 +14,21 @@ const Navbar = () => {
             Theppitak Maneepong
           </p>
         </div>
-      </div>
+      </Link>
       <div className="m-4 flex-1  text-4xl italic text-white">
         <div className="flex h-[calc(100dvh-240px)] flex-col justify-center">
-          <div className="m-10">About</div>
-          <div className="m-10">Projects</div>
-          <div className="m-10">Blogs</div>
-          <div className="m-10">Contact</div>
+          <Link className="m-10" href="/about">
+            About
+          </Link>
+          <Link className="m-10" href="/projects">
+            Projects
+          </Link>
+          <Link className="m-10" href="/blogs">
+            Blogs
+          </Link>
+          <Link className="m-10" href="/contact">
+            Contact
+          </Link>
         </div>
       </div>
     </div>
