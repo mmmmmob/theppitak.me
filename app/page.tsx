@@ -1,6 +1,12 @@
 "use client";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import Typewriting from "./components/Typewriting";
+
+const CurrentTime = dynamic(() => import("./components/home/CurrentTime"), {
+  ssr: false,
+});
+
+import Typewriting from "./components/home/Typewriting";
 
 export default function Home() {
   return (
@@ -13,6 +19,7 @@ export default function Home() {
         </div>
         <div className="h-1">
           <Typewriting />
+          <CurrentTime />
         </div>
       </div>
     </div>
