@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import NowPlaying from "./components/home/NowPlaying";
 
 const CurrentTime = dynamic(() => import("./components/home/CurrentTime"), {
   ssr: false,
@@ -20,6 +21,7 @@ export default function Home() {
         <div className="h-1">
           <Typewriting />
           <CurrentTime />
+          <NowPlaying />
         </div>
       </div>
     </div>
