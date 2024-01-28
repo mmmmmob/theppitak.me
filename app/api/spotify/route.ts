@@ -13,6 +13,7 @@ const NOW_PLAYING_ENDPOINT =
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 
 interface SpotifyData {
+  status: number;
   is_playing: boolean;
   item: {
     name: string;
@@ -54,14 +55,23 @@ const getAccessToken = async () => {
   return res.data.access_token;
 };
 
-const getNowPlaying = async () => {
+const getNowPlaying = async (): Promise<SpotifyData> => {
   const access_token = await getAccessToken();
 
-  return axios.get<SpotifyData>(NOW_PLAYING_ENDPOINT, {
+  const response = await fetch(NOW_PLAYING_ENDPOINT, {
+    method: "GET",
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+    next: { revalidate: 120 },
   });
+
+  if (!response.ok) {
+    throw new Error(`Error fetching now playing data: ${response.statusText}`);
+  }
+
+  const data = (await response.json()) as SpotifyData;
+  return data;
 };
 
 export async function GET(req: Request, res: NextResponse) {
@@ -72,20 +82,18 @@ export async function GET(req: Request, res: NextResponse) {
   if (
     response.status === 204 ||
     response.status > 400 ||
-    response.data.currently_playing_type !== "track"
+    response.currently_playing_type !== "track"
   ) {
     return NextResponse.json({ isPlaying: false });
   }
 
   const data = {
-    isPlaying: response.data.is_playing,
-    title: response.data.item.name,
-    album: response.data.item.album.name,
-    artist: response.data.item.album.artists
-      .map((artist) => artist.name)
-      .join(", "),
-    albumImageUrl: response.data.item.album.images[0].url,
-    songUrl: response.data.item.external_urls.spotify,
+    isPlaying: response.is_playing,
+    title: response.item.name,
+    album: response.item.album.name,
+    artist: response.item.album.artists.map((artist) => artist.name).join(", "),
+    albumImageUrl: response.item.album.images[0].url,
+    songUrl: response.item.external_urls.spotify,
   };
 
   return NextResponse.json(data);
