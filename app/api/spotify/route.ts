@@ -79,7 +79,6 @@ export async function GET(req: Request, res: NextResponse) {
   console.log("GET has been called");
 
   revalidateTag("song");
-
   const response = await getNowPlaying();
 
   if (
