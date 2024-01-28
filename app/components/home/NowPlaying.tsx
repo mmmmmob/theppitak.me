@@ -1,13 +1,20 @@
 "use client";
 
 import { SpotifyData } from "@/types/spotify";
-import useSWR, { Fetcher } from "swr";
+import useSWR, { Fetcher, SWRConfiguration } from "swr";
 
 const fetcher: Fetcher<SpotifyData> = (input: RequestInfo | URL) =>
   fetch(input).then((res) => res.json());
 
+const config: SWRConfiguration = {
+  fallbackData: {
+    SpotifyData: { title: "Offline", songUrl: "#" },
+  },
+  revalidateOnMount: false,
+};
+
 export default function NowPlaying() {
-  const { data } = useSWR<SpotifyData>("/api/spotify/", fetcher);
+  const { data } = useSWR<SpotifyData>("/api/spotify/", fetcher, config);
 
   return data?.isPlaying ? (
     <div className="flex">
