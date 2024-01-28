@@ -52,7 +52,7 @@ const ContactForm: FC = () => {
         </label>
         <Textarea {...register("message", { required: true })} rows={10} />
         <div
-          className="cf-turnstile checkbox"
+          className="cf-turnstile checkbox mt-4 flex justify-center"
           data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
         />
         {/* TODO Find ways to implement loading status while API is on-call */}
