@@ -10,8 +10,7 @@ const config: SWRConfiguration = {
   fallbackData: {
     SpotifyData: { title: "Offline", songUrl: "#" },
   },
-  revalidateOnMount: true,
-  refreshInterval: 60000,
+  refreshInterval: 5000,
 };
 
 export default function NowPlaying() {
