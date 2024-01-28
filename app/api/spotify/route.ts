@@ -1,6 +1,5 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
-// import querystring from "querystring";
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
