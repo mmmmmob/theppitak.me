@@ -10,23 +10,35 @@ const Navbar = () => {
           <Image src="/logo.png" alt="logo" width={90} height={90} />
         </div>
         <div className="h-fit self-center">
-          <p className=" pl-5 text-2xl font-semibold text-white">
+          <p className=" pl-5 text-2xl font-semibold text-white hover:text-blue">
             Theppitak Maneepong
           </p>
         </div>
       </Link>
       <div className="m-4 flex-1  text-4xl italic text-white">
         <div className="flex h-[calc(100dvh-240px)] flex-col justify-center">
-          <Link className="m-10" href="/about">
+          <Link
+            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            href="/about"
+          >
             About
           </Link>
-          <Link className="m-10" href="/projects">
+          <Link
+            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            href="/projects"
+          >
             Projects
           </Link>
-          <Link className="m-10" href="/blogs">
+          <Link
+            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            href="/blogs"
+          >
             Blogs
           </Link>
-          <Link className="m-10" href="/contact">
+          <Link
+            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            href="/contact"
+          >
             Contact
           </Link>
         </div>
