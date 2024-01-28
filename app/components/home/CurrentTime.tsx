@@ -16,7 +16,7 @@ function CurrentTime() {
       <p className="font-bold dark:text-white">
         {time.toLocaleTimeString("en-GB", { timeZone: "Asia/Bangkok" })}
       </p>
-      <p className="mx-1 text-red dark:text-blue">
+      <p className="mx-1 font-light text-red dark:text-blue">
         •{" "}
         <a href={"https://en.wikipedia.org/wiki/Bangkok"} target={"_blank"}>
           Bangkok, Thailand

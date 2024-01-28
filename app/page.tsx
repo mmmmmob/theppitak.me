@@ -11,19 +11,17 @@ import Typewriting from "./components/home/Typewriting";
 
 export default function Home() {
   return (
-    <div className="mx-16 flex h-[calc(100dvh-56px)] items-center">
-      <div className="flex flex-col">
-        <div>
-          <p className="text-thin text-2xl dark:text-white">
-            Always at your service for
-          </p>
-        </div>
-        <div className="h-1">
+    <div className="flex h-[calc(100dvh-56px)] flex-col items-center justify-between py-4">
+      <CurrentTime />
+      <div className="flex flex-col flex-wrap items-center">
+        <p className="text-thin text-center text-2xl dark:text-white">
+          Always at your service for
+        </p>
+        <div className="h-16 w-fit">
           <Typewriting />
-          <CurrentTime />
-          <NowPlaying />
         </div>
       </div>
+      <NowPlaying />
     </div>
   );
 }
