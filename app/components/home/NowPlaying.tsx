@@ -27,6 +27,9 @@ export default function NowPlaying() {
       </div>
     </div>
   ) : (
-    <div>Fail to load</div>
+    <div className="flex">
+      <p className="mr-1 font-light text-red dark:text-blue">Now Listening •</p>
+      <p className="dark:text-white">to silence</p>
+    </div>
   );
 }

@@ -1,7 +1,5 @@
-"use client";
-
 import axios from "axios";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
@@ -66,7 +64,7 @@ const getNowPlaying = async () => {
   });
 };
 
-export async function GET(req: NextRequest, res: Response) {
+export async function GET(res: Response) {
   console.log("GET has been called");
 
   const response = await getNowPlaying();
