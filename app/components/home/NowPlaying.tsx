@@ -1,3 +1,5 @@
+"use client";
+
 import { SpotifyData } from "@/types/spotify";
 import useSWR, { Fetcher } from "swr";
 
