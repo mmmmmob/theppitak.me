@@ -64,7 +64,7 @@ const getNowPlaying = async () => {
   });
 };
 
-export async function GET(res: Response) {
+export async function GET() {
   console.log("GET has been called");
 
   const response = await getNowPlaying();
