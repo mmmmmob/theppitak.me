@@ -1,16 +1,13 @@
-import { SpotifyData } from "@/app/types/spotify";
-import useSWR from "swr";
+import { SpotifyData } from "@/types/spotify";
+import useSWR, { Fetcher } from "swr";
+
+const fetcher: Fetcher<SpotifyData> = (input: RequestInfo | URL) =>
+  fetch(input).then((res) => res.json());
 
 export default function NowPlaying() {
-  const { data, error } = useSWR<SpotifyData>("/api/spotify");
+  const { data } = useSWR<SpotifyData>("/api/spotify/", fetcher);
 
-  if (error) {
-    console.error("Error fetching data:", error);
-  }
-
-  if (data) {
-    console.log("Data from API:", data);
-  }
+  console.log("Data from API:", data);
 
   return data?.isPlaying ? (
     <div>
