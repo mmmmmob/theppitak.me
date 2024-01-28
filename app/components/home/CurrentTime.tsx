@@ -18,7 +18,12 @@ function CurrentTime() {
       </p>
       <p className="mx-1 font-light text-red dark:text-blue">
         •{" "}
-        <a href={"https://en.wikipedia.org/wiki/Bangkok"} target={"_blank"}>
+        <a
+          href={
+            "https://maps.apple.com/place?q=Bangkok&auid=11435960156529778241&ll=13.753253,100.501641&lsp=7618&address=Bangkok,%20Bangkok,%20Thailand"
+          }
+          target={"_blank"}
+        >
           Bangkok, Thailand
         </a>
       </p>
