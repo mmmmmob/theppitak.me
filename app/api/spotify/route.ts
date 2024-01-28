@@ -1,3 +1,5 @@
+"use client";
+
 import axios from "axios";
 import { NextResponse } from "next/server";
 
@@ -64,7 +66,7 @@ const getNowPlaying = async () => {
   });
 };
 
-export async function GET() {
+export async function GET(res: Response) {
   console.log("GET has been called");
 
   const response = await getNowPlaying();
