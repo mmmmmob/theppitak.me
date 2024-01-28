@@ -64,9 +64,7 @@ const getNowPlaying = async () => {
   });
 };
 
-export const dynamic = "force-dynamic";
-
-export async function GET(req: Request, res: Response) {
+export async function GET(req: NextRequest, res: NextResponse) {
   console.log("GET has been called");
 
   const response = await getNowPlaying();
