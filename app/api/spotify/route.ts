@@ -1,5 +1,6 @@
 import axios from "axios";
-import { NextRequest, NextResponse } from "next/server";
+import { revalidateTag } from "next/cache";
+import { NextResponse } from "next/server";
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
@@ -63,7 +64,7 @@ const getNowPlaying = async (): Promise<SpotifyData> => {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
-    next: { revalidate: 60 },
+    next: { tags: ["song"] },
   });
 
   if (!response.ok) {
@@ -76,6 +77,8 @@ const getNowPlaying = async (): Promise<SpotifyData> => {
 
 export async function GET(req: Request, res: NextResponse) {
   console.log("GET has been called");
+
+  revalidateTag("song");
 
   const response = await getNowPlaying();
 
