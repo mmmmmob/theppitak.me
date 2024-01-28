@@ -34,6 +34,7 @@ export default function NowPlaying() {
       </div>
     </div>
   ) : (
+    // TODO Change to Last played track if data.isPlaying === false
     <div className="flex">
       <p className="mr-1 font-light text-red dark:text-blue">Now Listening •</p>
       <p className="font-bold dark:text-white">to silence</p>
