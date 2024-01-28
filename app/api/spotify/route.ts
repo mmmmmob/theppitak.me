@@ -63,7 +63,7 @@ const getNowPlaying = async (): Promise<SpotifyData> => {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
-    next: { revalidate: 120 },
+    next: { revalidate: 60 },
   });
 
   if (!response.ok) {
