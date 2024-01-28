@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="w-fit">
         <h1 className="text-5xl italic">Still Curious?</h1>
         <h1 className="mt-2 text-5xl font-semibold italic">
-          Let's get in touch.
+          Let&apos;s get in touch.
         </h1>
       </div>
       <div className="mt-6 w-[375px]">
