@@ -24,19 +24,19 @@ export default function NowPlaying() {
           src={data.albumImageUrl}
           className="mr-1 h-5 w-5 self-center rounded-md"
         ></img>
-        <p className="font-semibold">
+        <p className="font-bold">
           <a href={data.songUrl} target="_blank">
             {data.title}
           </a>
         </p>
-        <p className="mx-1 font-extralight">by</p>
-        <p className="font-semibold"> {data.artist}</p>
+        <p className="mx-1 font-light">by</p>
+        <p className="font-bold"> {data.artist}</p>
       </div>
     </div>
   ) : (
     <div className="flex">
       <p className="mr-1 font-light text-red dark:text-blue">Now Listening •</p>
-      <p className="dark:text-white">to silence</p>
+      <p className="font-bold dark:text-white">to silence</p>
     </div>
   );
 }
