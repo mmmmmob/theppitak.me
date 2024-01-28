@@ -4,13 +4,13 @@ import { SpotifyData } from "@/types/spotify";
 import useSWR, { Fetcher, SWRConfiguration } from "swr";
 
 const fetcher: Fetcher<SpotifyData> = (input: RequestInfo | URL) =>
-  fetch(input).then((res) => res.json());
+  fetch(input, { next: { revalidate: 60 } }).then((res) => res.json());
 
 const config: SWRConfiguration = {
   fallbackData: {
     SpotifyData: { title: "Offline", songUrl: "#" },
   },
-  refreshInterval: 5000,
+  refreshInterval: 90000,
 };
 
 export default function NowPlaying() {
