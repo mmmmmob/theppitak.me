@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
+  const route = usePathname();
+
   return (
     <div className="absolute left-0 top-0 flex h-screen w-72 flex-col bg-black">
       <Link className="flex h-32 flex-grow-0 border-b-2" href="/">
@@ -18,25 +23,41 @@ const Navbar = () => {
       <div className="m-4 flex-1  text-4xl italic text-white">
         <div className="flex h-[calc(100dvh-240px)] flex-col justify-center">
           <Link
-            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            className={`m-10 ${
+              route === "/about"
+                ? "text-blue underline decoration-red"
+                : "hover:text-blue hover:underline hover:decoration-red/80"
+            }`}
             href="/about"
           >
             About
           </Link>
           <Link
-            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            className={`m-10 ${
+              route === "/projects"
+                ? "text-blue underline decoration-red"
+                : "hover:text-blue hover:underline hover:decoration-red/80"
+            }`}
             href="/projects"
           >
             Projects
           </Link>
           <Link
-            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            className={`m-10 ${
+              route === "/blogs"
+                ? "text-blue underline decoration-red"
+                : "hover:text-blue hover:underline hover:decoration-red/80"
+            }`}
             href="/blogs"
           >
             Blogs
           </Link>
           <Link
-            className="m-10 hover:text-blue hover:underline hover:decoration-red/80"
+            className={`m-10 ${
+              route === "/contact"
+                ? "text-blue underline decoration-red"
+                : "hover:text-blue hover:underline hover:decoration-red/80"
+            }`}
             href="/contact"
           >
             Contact
