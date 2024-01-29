@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
-  const router = useRouter();
+  const route = usePathname();
 
   return (
     <div className="absolute left-0 top-0 flex h-screen w-72 flex-col bg-black">
@@ -22,7 +24,7 @@ const Navbar = () => {
         <div className="flex h-[calc(100dvh-240px)] flex-col justify-center">
           <Link
             className={`m-10 ${
-              router.pathname === "/about"
+              route === "/about"
                 ? "text-blue underline decoration-red"
                 : "hover:text-blue hover:underline hover:decoration-red/80"
             }`}
@@ -32,7 +34,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={`m-10 ${
-              router.pathname === "/projects"
+              route === "/projects"
                 ? "text-blue underline decoration-red"
                 : "hover:text-blue hover:underline hover:decoration-red/80"
             }`}
@@ -42,7 +44,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={`m-10 ${
-              router.pathname === "/blogs"
+              route === "/blogs"
                 ? "text-blue underline decoration-red"
                 : "hover:text-blue hover:underline hover:decoration-red/80"
             }`}
@@ -52,7 +54,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={`m-10 ${
-              router.pathname === "/contact"
+              route === "/contact"
                 ? "text-blue underline decoration-red"
                 : "hover:text-blue hover:underline hover:decoration-red/80"
             }`}
