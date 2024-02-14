@@ -56,7 +56,7 @@ const ContactForm: FC = () => {
           data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
         />
         {/* TODO Find ways to implement loading status while API is on-call */}
-        <Button className="mt-4 h-14 w-full hover:bg-red dark:text-black dark:hover:bg-blue">
+        <Button className="mt-4 h-14 w-full font-mono hover:bg-red dark:text-black dark:hover:bg-blue">
           <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> Submit
         </Button>
       </form>

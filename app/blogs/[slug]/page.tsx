@@ -1,6 +1,9 @@
+import { Button } from "@/components/ui/button";
+import { ChevronLeftIcon } from "@radix-ui/react-icons";
 import fs from "fs";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Link from "next/link";
 import path from "path";
 
 // Generate slug name at build time (return paths to /blogs/[slug])
@@ -35,13 +38,23 @@ export default function Post({ params }: any) {
   const props = getPost(params);
 
   return (
-    <div className="pb-32 pt-32">
+    <div className="pb-32 pt-16">
       <article className="prose prose-lg prose-gray mx-auto dark:prose-invert">
-        <div className="flex justify-between border-b border-black align-middle dark:border-white">
-          <h1>{props.frontMatter.title}</h1>
-          <p className="italic">
-            {props.frontMatter.date}, {props.frontMatter.year}
-          </p>
+        <div className="flex flex-col justify-between border-b border-black align-middle dark:border-white">
+          <div className="mb-8">
+            <Link href={"/blogs"}>
+              <Button className="font-mono">
+                <ChevronLeftIcon className="mr-1" />
+                Back
+              </Button>
+            </Link>
+          </div>
+          <div className="flex justify-between">
+            <h1>{props.frontMatter.title}</h1>
+            <p className="italic">
+              {props.frontMatter.date}, {props.frontMatter.year}
+            </p>
+          </div>
         </div>
         <div className="pt-2">
           <MDXRemote source={props.content} />
