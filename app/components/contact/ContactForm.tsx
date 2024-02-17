@@ -51,10 +51,10 @@ const ContactForm: FC = () => {
           More details as you wish
         </label>
         <Textarea {...register("message", { required: true })} rows={10} />
-        <div
+        {/* <div
           className="cf-turnstile checkbox mt-4 flex justify-center"
           data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
-        />
+        /> */}
         {/* TODO Find ways to implement loading status while API is on-call */}
         <Button className="mt-4 h-14 w-full font-mono hover:bg-red dark:text-black dark:hover:bg-blue">
           <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> Submit
