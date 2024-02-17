@@ -1,7 +1,6 @@
 import React from "react";
+import Bio from "../components/about/Bio";
 
-const About = () => {
-  return <div>About</div>;
-};
-
-export default About;
+export default function About() {
+  return <Bio />;
+}
