@@ -19,7 +19,7 @@ const Bio = () => {
           </span>
         </div>
       </div>
-      <div className="my-6 text-justify">
+      <div className="my-6 text-justify text-lg">
         <p className="mb-3">
           Officia dolor ipsum et reprehenderit consectetur culpa adipisicing
           tempor amet anim deserunt est aliqua sint ex. Consectetur incididunt
