@@ -12,11 +12,14 @@ const Bio = () => {
           src={"/avatar.jpg"}
           className="rounded-xl"
         ></Image>
-        <span className="ml-4 self-center text-4xl font-semibold italic">
-          👋🏼 Hey, there!
-        </span>
+        <div className="ml-4 flex self-center">
+          <span className="mr-2 text-4xl">👋🏼 </span>
+          <span className="self-center text-4xl font-semibold italic">
+            Hey, there!
+          </span>
+        </div>
       </div>
-      <div className="my-3 text-justify">
+      <div className="my-6 text-justify">
         <p className="mb-3">
           Officia dolor ipsum et reprehenderit consectetur culpa adipisicing
           tempor amet anim deserunt est aliqua sint ex. Consectetur incididunt
