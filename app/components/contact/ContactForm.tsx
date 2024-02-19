@@ -24,11 +24,11 @@ const ContactForm: FC = () => {
 
   return (
     <main>
-      <Script
+      {/* <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
         async={true}
         defer={true}
-      />
+      /> */}
 
       <form onSubmit={handleSubmit(onSubmit)} action="/api/handler">
         <label htmlFor="name" className="font-semibold">

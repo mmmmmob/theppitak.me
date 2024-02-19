@@ -1,7 +1,16 @@
 import React from "react";
+import Bio from "../components/about/Bio";
+import Stack from "../components/about/Stack";
+import WorkExp from "../components/about/WorkExp";
 
-const About = () => {
-  return <div>About</div>;
-};
-
-export default About;
+export default function About() {
+  return (
+    <div className="container mx-auto my-10 flex flex-col justify-center overflow-x-scroll p-16">
+      <div>
+        <Bio />
+        <Stack />
+        <WorkExp />
+      </div>
+    </div>
+  );
+}
