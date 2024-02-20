@@ -23,17 +23,17 @@ import {
 
 class ToolSet {
   id: number;
-  logo: JSX.Element;
+  logo: React.ReactNode;
   toolTip: string;
 
-  constructor(id: number, logo: JSX.Element, toolTip: string) {
+  constructor(id: number, logo: React.ReactNode, toolTip: string) {
     this.id = id;
     this.logo = logo;
     this.toolTip = toolTip;
   }
 }
 
-const toolSetsData: [number, JSX.Element, string][] = [
+const toolSetsData: [number, React.ReactNode, string][] = [
   [1, <FaHtml5 />, "HTML"],
   [2, <FaCss3 />, "CSS"],
   [3, <SiJavascript />, "JavaScript"],
