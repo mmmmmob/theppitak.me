@@ -19,9 +19,9 @@ const Blog = () => {
   });
 
   return (
-    <main className="mx-24 flex h-[calc(100dvh-56px)] flex-col items-stretch pt-32">
+    <main className="container mx-auto my-auto flex flex-col justify-center overflow-x-scroll p-16">
       <section>
-        <h2 className="text-5xl font-bold">Latest Posts</h2>
+        <h2 className="text-5xl font-bold italic">Latest Posts</h2>
         <div className="mt-4 h-3/4 overflow-y-scroll">
           {blogs.map((blog) => (
             <Link href={"/blogs/" + blog.slug} passHref key={blog.slug}>

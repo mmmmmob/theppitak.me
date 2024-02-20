@@ -12,30 +12,25 @@ const Bio = () => {
           src={"/avatar.jpg"}
           className="rounded-xl"
         ></Image>
-        <div className="ml-4 flex self-center">
-          <span className="mr-2 text-4xl">👋🏼 </span>
-          <span className="self-center text-4xl font-semibold italic">
-            Hey, there!
+        <div className="ml-4 flex flex-col self-center">
+          <div className="flex">
+            <span className="mr-2 self-center text-4xl">👋🏼</span>
+            <span className="self-center text-5xl font-semibold italic">
+              Hey, there!
+            </span>
+          </div>
+          <span className="mt-2 text-xl">
+            I'm Mob. A newcomer at the crossroad of tech and creativity.
           </span>
         </div>
       </div>
       <div className="my-6 text-justify text-lg">
-        <p className="mb-3">
-          Officia dolor ipsum et reprehenderit consectetur culpa adipisicing
-          tempor amet anim deserunt est aliqua sint ex. Consectetur incididunt
-          est labore mollit sint minim occaecat aliquip veniam ullamco sint.
-          Anim amet dolore reprehenderit aliquip esse incididunt irure nisi
-          adipisicing consequat non qui et eiusmod veniam. Aliqua quis enim sit
-          ex Lorem ea. Sunt ut nostrud sit irure dolore ad exercitation occaecat
-          aute eu et consectetur. Ullamco sunt nisi et incididunt Lorem irure ea
-          irure dolor elit.
-        </p>
-        <p>
-          Excepteur aute adipisicing est proident id eu aliqua culpa in do
-          eiusmod tempor voluptate voluptate. Aliqua in aliqua irure. Aliqua ut
-          Lorem esse esse pariatur dolor proident sit cillum et id aute ut Lorem
-          dolore. Proident Lorem et sint dolor proident. Ut occaecat dolore amet
-          proident mollit commodo pariatur.
+        <p className="mb-3 indent-10">
+          Former creative copywriter and project manager, now on my way to
+          becoming a developer. On the right side of my brain lies the love of
+          fun and goofy ways to communicate things, while on the left is the
+          love to find ways to manage unmanageable problems into the perfect
+          march.
         </p>
       </div>
     </main>

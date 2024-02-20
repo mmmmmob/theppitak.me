@@ -5,7 +5,7 @@ import WorkExp from "../components/about/WorkExp";
 
 export default function About() {
   return (
-    <div className="container mx-auto my-10 flex flex-col justify-center overflow-x-scroll p-16">
+    <div className="container mx-auto my-auto flex flex-col justify-center overflow-x-scroll p-16">
       <div>
         <Bio />
         <Stack />
