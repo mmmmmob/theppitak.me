@@ -21,189 +21,63 @@ import {
   SiVisualstudiocode,
 } from "react-icons/si";
 
+class ToolSet {
+  id: string;
+  logo: React.ReactNode;
+  toolTip: string;
+
+  constructor(id: string, logo: React.ReactNode, toolTip: string) {
+    this.id = id;
+    this.logo = logo;
+    this.toolTip = toolTip;
+  }
+}
+
+const toolSetsData: { id: string; logo: React.ReactNode; toolTip: string }[] = [
+  { id: "1", logo: <FaHtml5 key={1} />, toolTip: "HTML" },
+  { id: "2", logo: <FaCss3 key={2} />, toolTip: "CSS" },
+  { id: "3", logo: <SiJavascript key={3} />, toolTip: "JavaScript" },
+  { id: "4", logo: <FaReact key={4} />, toolTip: "React" },
+  { id: "5", logo: <SiTailwindcss key={5} />, toolTip: "Tailwind CSS" },
+  { id: "6", logo: <SiDaisyui key={6} />, toolTip: "DaisyUI" },
+  { id: "7", logo: <FaNodeJs key={7} />, toolTip: "Node.js" },
+  { id: "8", logo: <SiExpress key={8} />, toolTip: "Express" },
+  { id: "9", logo: <SiMongodb key={9} />, toolTip: "MongoDB" },
+  { id: "10", logo: <SiSqlite key={10} />, toolTip: "SQLite" },
+  { id: "11", logo: <SiNextdotjs key={11} />, toolTip: "Next.js" },
+  { id: "12", logo: <SiTypescript key={12} />, toolTip: "TypeScript" },
+  { id: "13", logo: <SiFigma key={13} />, toolTip: "Figma" },
+  {
+    id: "14",
+    logo: <SiVisualstudiocode key={14} />,
+    toolTip: "Visual Studio Code",
+  },
+  { id: "15", logo: <SiNotion key={15} />, toolTip: "Notion" },
+  { id: "16", logo: <SiTrello key={16} />, toolTip: "Trello" },
+];
+
+const toolSets: ToolSet[] = toolSetsData.map(
+  ({ id, logo, toolTip }) => new ToolSet(id, logo, toolTip),
+);
+
 export default function Stack() {
   return (
-    <main className="mb-6 flex justify-between pt-3">
+    <main className="flex justify-between py-3">
       <div className="flex w-fit self-center">
         <span className="mr-2 text-4xl">🛠️ </span>
         <span className=" text-4xl font-semibold italic">Toolsets</span>
       </div>
-      <div className="grid h-64 w-2/3 flex-none grid-cols-4 items-center justify-items-center overflow-x-scroll rounded-xl border-2 border-red py-3 dark:border-blue">
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <FaHtml5 size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>HTML</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <FaCss3 size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>CSS</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiJavascript size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>JavaScript</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <FaReact size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>React</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiTailwindcss size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Tailwind CSS</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiDaisyui size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>DaisyUI</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <FaNodeJs size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Node.js</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiExpress size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Express</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiMongodb size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>MongoDB</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiSqlite size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>SQLite</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiNextdotjs size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Next.js</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiTypescript size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>TypeScript</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiFigma size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Figma</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiVisualstudiocode size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Visual Studio Code</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiNotion size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Notion</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <SiTrello size={40} />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Trello</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+      <div className="grid h-64 w-2/3 flex-none grid-cols-4 items-center justify-items-center overflow-x-scroll rounded-xl border-2 border-red py-3 text-3xl dark:border-blue">
+        {toolSets.map((tool) => (
+          <TooltipProvider key={tool.id}>
+            <Tooltip>
+              <TooltipTrigger>{tool.logo}</TooltipTrigger>
+              <TooltipContent>
+                <p>{tool.toolTip}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ))}
       </div>
     </main>
   );
