@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 import React from "react";
 
 export default function WorkExp() {
@@ -17,21 +18,32 @@ export default function WorkExp() {
       <Carousel>
         <CarouselContent>
           <CarouselItem className="basis-2/5">
-            <div className="mr-4 mt-6 h-36 flex-shrink-0 rounded-xl border-2 border-red dark:border-blue"></div>
-          </CarouselItem>
-          <CarouselItem className="basis-2/5">
-            <div className="mr-4 mt-6 h-36 flex-shrink-0 rounded-xl border-2 border-red dark:border-blue"></div>
-          </CarouselItem>
-          <CarouselItem className="basis-2/5">
-            <div className="mr-4 mt-6 h-36 flex-shrink-0 rounded-xl border-2 border-red dark:border-blue"></div>
-          </CarouselItem>
+            <div className="mr-4 mt-6 flex h-36 place-content-center rounded-xl border-2 border-red dark:border-blue">
+              <div className="mx-2 self-center">
+                <Image
+                  src={"http://placekitten.com/100/100"}
+                  width={100}
+                  height={100}
+                  alt="logo"
+                  className="object-cover"
+                />
+              </div>
+              <div className=" mr-2 flex w-fit flex-col divide-y divide-dotted divide-red self-center dark:divide-blue">
+                <a
+                  className="mb-1 text-xl font-bold italic hover:text-red dark:hover:text-blue"
+                  href="https://glowyourstory.com"
+                  target="_blank"
+                >
+                  Glow Story
+                </a>
 
-          <CarouselItem className="basis-2/5">
-            <div className="mr-4 mt-6 h-36 flex-shrink-0 rounded-xl border-2 border-red dark:border-blue"></div>
-          </CarouselItem>
-
-          <CarouselItem className="basis-2/5">
-            <div className="mr-4 mt-6 h-36 flex-shrink-0 rounded-xl border-2 border-red dark:border-blue"></div>
+                <div>
+                  <p className="mt-1 text-xs">
+                    Operation and Project Manager, Creative Copywriter
+                  </p>
+                </div>
+              </div>
+            </div>
           </CarouselItem>
         </CarouselContent>
         <CarouselPrevious />
