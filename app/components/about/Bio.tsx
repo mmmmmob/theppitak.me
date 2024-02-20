@@ -14,10 +14,10 @@ const Bio = () => {
         ></Image>
         <div className="ml-4 flex flex-col self-center">
           <div className="flex">
-            <span className="mr-2 self-center text-4xl">👋🏼</span>
             <span className="self-center text-5xl font-semibold italic">
               Hey, there!
             </span>
+            <span className="waving-hand ml-2 self-center text-4xl">👋🏼</span>
           </div>
           <span className="mt-2 text-xl">
             I&apos;m Mob. A newcomer at the crossroad of tech and creativity.
