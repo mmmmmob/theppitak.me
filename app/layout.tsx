@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
@@ -25,7 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="dark:bg-gray flex h-screen bg-white">
+          <div className="flex h-screen bg-white dark:bg-gray">
             <Navbar />
             <div className=" flex flex-1 flex-col overflow-hidden ">
               <main className="flex-1 overflow-y-auto overflow-x-hidden pl-72">
