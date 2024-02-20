@@ -20,7 +20,7 @@ const Bio = () => {
             </span>
           </div>
           <span className="mt-2 text-xl">
-            I'm Mob. A newcomer at the crossroad of tech and creativity.
+            I&apos;m Mob. A newcomer at the crossroad of tech and creativity.
           </span>
         </div>
       </div>

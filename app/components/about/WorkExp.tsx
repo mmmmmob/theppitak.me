@@ -9,7 +9,7 @@ import React from "react";
 
 export default function WorkExp() {
   return (
-    <main className="my-3">
+    <main className="mt-3">
       <div className="flex w-fit">
         <span className="mr-2 text-4xl">💼</span>
         <span className="text-4xl font-semibold italic">Work Experiences</span>
