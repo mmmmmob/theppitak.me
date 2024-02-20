@@ -25,7 +25,7 @@ const Bio = () => {
         </div>
       </div>
       <div className="my-6 text-justify text-lg">
-        <p className="mb-3 indent-10">
+        <p className="indent-10">
           Former creative copywriter and project manager, now on my way to
           becoming a developer. On the right side of my brain lies the love of
           fun and goofy ways to communicate things, while on the left is the
