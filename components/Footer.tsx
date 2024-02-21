@@ -3,7 +3,7 @@ import React from "react";
 import ModeToggle from "./ModeToggle";
 const Footer = () => {
   return (
-    <div className="z-10 flex h-14 w-screen bg-black">
+    <div className="fixed bottom-0 z-10 flex h-14 w-screen bg-black">
       <div className="w-72 flex-grow-0">
         <div className="pl-4">
           <ModeToggle />

@@ -25,12 +25,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex h-screen bg-white dark:bg-gray">
+          <div className="flex bg-white dark:bg-gray">
             <Navbar />
-            <div className=" flex flex-1 flex-col overflow-hidden ">
-              <main className="flex-1 overflow-y-auto overflow-x-hidden pl-72">
-                {children}
-              </main>
+            <div className=" flex h-dvh flex-col overflow-hidden ">
+              <main className="flex-1 overflow-auto pl-72">{children}</main>
               <Footer />
             </div>
           </div>

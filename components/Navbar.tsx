@@ -9,13 +9,13 @@ const Navbar = () => {
   const route = usePathname();
 
   return (
-    <div className="absolute left-0 top-0 flex h-screen w-72 flex-col overflow-x-scroll bg-black">
-      <Link className="flex h-32 flex-grow-0 border-b-2" href="/">
+    <div className="absolute left-0 top-0 flex h-dvh w-72 flex-col overflow-x-scroll bg-black">
+      <Link className="flex h-32 shrink-0 flex-grow-0 border-b-2" href="/">
         <div className="mb-3 self-center pl-7">
           <Image src="/logo.png" alt="logo" width={90} height={90} />
         </div>
         <div className="h-fit self-center">
-          <p className=" pl-5 text-2xl font-semibold text-white hover:text-blue">
+          <p className="pl-5 text-2xl font-semibold text-white hover:text-blue">
             Theppitak Maneepong
           </p>
         </div>
