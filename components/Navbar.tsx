@@ -9,7 +9,7 @@ const Navbar = () => {
   const route = usePathname();
 
   return (
-    <div className="absolute left-0 top-0 flex h-screen w-72 flex-col bg-black">
+    <div className="absolute left-0 top-0 flex h-screen w-72 flex-col overflow-x-scroll bg-black">
       <Link className="flex h-32 flex-grow-0 border-b-2" href="/">
         <div className="mb-3 self-center pl-7">
           <Image src="/logo.png" alt="logo" width={90} height={90} />
@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
       </Link>
       <div className="m-4 flex-1  text-4xl italic text-white">
-        <div className="flex h-[calc(100dvh-240px)] flex-col justify-center">
+        <div className="flex h-full flex-col justify-center">
           <Link
             className={`m-10 ${
               route === "/about"
